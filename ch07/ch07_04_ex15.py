@@ -11,13 +11,22 @@ from matplotlib import rcParams
 # Set parameters for latex encoding/packages.
 rcParams['text.usetex'] = True
 rcParams['text.latex.preamble'] = r"""
-\usepackage{amsthm}
 \usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{amsfonts}
-\usepackage{mathtools}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\newsavebox\foobox
+\newlength{\foodim}
+\newcommand{\slantbox}[2][0]{\mbox{%
+        \sbox{\foobox}{#2}%
+        \foodim=#1\wd\foobox
+        \hskip \wd\foobox
+        \hskip -0.5\foodim
+        \llap{\usebox{\foobox}}%
+        \hskip 0.5\foodim
+}}
+\def\Heaviside{\slantbox[-.45]{$\mathscr{U}$}}
 """
 
 
@@ -28,7 +37,10 @@ t = np.linspace(0, 2*np.pi)
 # Define piecewise solution function.
 funcs = []
 funcs.append(lambda t: (1.0/4.0)*np.sin(4.0*t) + (1.0/8.0)*t*np.sin(4.0*t))
-funcs.append(lambda t: (1.0/8.0)*np.sin(4.0*t) + (1.0/8.0)*t*np.sin(4.0*t))
+funcs.append(
+    lambda t: (1.0/4.0)*np.sin(4.0*t) + (1.0/8.0)*t*np.sin(4.0*t) 
+    - (1.0/8.0)*(t-np.pi)*np.sin(4.0*(t-np.pi))
+    )
 
 def y(t):
     return np.piecewise(t, [t < np.pi, t >= np.pi], funcs)
@@ -36,17 +48,7 @@ def y(t):
 
 # Plot figure and axes.
 fig, ax = plt.subplots()
-eq = r"""
-\[
-    y(t) = 
-    \left \{
-    \begin{array}{lr} 
-        \frac{1}{4} \sin{4t} + \frac{1}{8}t \sin{4t} & 0 \leq t < \pi \\ 
-        \frac{1}{8} \sin{4t} + \frac{1}{8}t \sin{4t} & t \geq \pi
-    \end{array}
-    \right \}
-\]
-"""
+eq = r"$y(t) = \frac{1}{4}\sin{4t} + \frac{1}{8}t\sin{4t} - \frac{1}{8}(t - \pi)\sin{4(t - \pi)} \Heaviside (t - \pi)$"
 solution = ax.plot(t, y(t), label=eq)
 
 
