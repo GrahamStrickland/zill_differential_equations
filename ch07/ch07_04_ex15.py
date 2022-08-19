@@ -56,9 +56,9 @@ solution = ax.plot(t, y(t), label=eq)
 ax.set_title("Zill - Section 7.4 - Exercise 15")
 ax.set_xlabel("$t$")
 ax.set_ylabel("$y$")
-ax.legend()
+ax.legend(loc='upper left')
 
 
 # Show plot and save figure.
 plt.show()
-fig.savefig("ch07_4ex15.png")
+fig.savefig("ch07_04_ex15.pdf")
