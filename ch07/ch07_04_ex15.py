@@ -31,7 +31,7 @@ rcParams['text.latex.preamble'] = r"""
 
 
 # Set domain of solution.
-t = np.linspace(0, 2*np.pi)
+t = np.linspace(start=0, stop=2*np.pi, num=500)
 
 
 # Define piecewise solution function.
