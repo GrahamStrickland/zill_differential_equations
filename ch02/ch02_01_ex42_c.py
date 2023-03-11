@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.1: Exercise 42. (c)
 import numpy as np
@@ -37,4 +38,4 @@ plt.vlines(1, Xlim[0], Xlim[1], 'gray', 'dashed', label=r"$X = 1$")
 plt.show()
 
 # save plot
-fig.savefig("ch02_01_ex42_c.png")
+fig.savefig("ch02_01_ex42_c.pdf")

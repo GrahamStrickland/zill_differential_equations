@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 # Zill - Chapter 1 Section 1 - Exercise 64
+
 # Verifying solutions to a differential equation using SymPy
 import sympy
 

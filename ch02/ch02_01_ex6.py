@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.1: Exercise 6
 import matplotlib.pyplot as plt
@@ -28,4 +29,4 @@ plt.title("Zill - Section 2.1 -  Exercise 6")
 plt.show()
 
 # save plot
-fig.savefig("ch02_01_ex6.png")
+fig.savefig("ch02_01_ex6.pdf")

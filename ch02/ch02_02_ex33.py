@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.2. - Exercise 33
 import numpy as np
@@ -26,4 +27,4 @@ ax.legend()
 plt.show()
 
 # save plot
-fig.savefig("ch02_02_ex33.png")
+fig.savefig("ch02_02_ex33.pdf")

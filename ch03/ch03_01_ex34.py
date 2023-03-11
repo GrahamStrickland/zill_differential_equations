@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 3.1 - Exercise 34
 import numpy as np

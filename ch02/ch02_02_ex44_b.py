@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.2: Exercise 44. (b)
 import numpy as np
@@ -30,4 +31,4 @@ ax.legend((r"$y_1(x) = y_2(x) = 3 + \sqrt{2x + 1}$",
 plt.show()
 
 # save plot
-fig.savefig("ch02_02_ex44_b.png")
+fig.savefig("ch02_02_ex44_b.pdf")

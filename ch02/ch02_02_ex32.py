@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.2. - Exercise 32
 import numpy as np
@@ -30,4 +31,4 @@ ax.legend([r"$y_1(x) = x^3 + 2x^2 + 2x + 3$",
 plt.show()
 
 # save plot
-fig.savefig("ch02_02_ex32.png")
+fig.savefig("ch02_02_ex32.pdf")

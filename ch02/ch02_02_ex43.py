@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 2.2: Exercise 43
 import numpy as np
@@ -38,4 +39,4 @@ ax.legend((r"$y_1(x) = \sqrt{\frac{-e^{2x}}{\frac{3}{4} - e^{2x}}}$",
 plt.show()
 
 # save plot
-fig.savefig("ch02_02_ex43.png")
+fig.savefig("ch02_02_ex43.pdf")

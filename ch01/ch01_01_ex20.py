@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems
 # Section 1.1: Exercise 20
 import numpy as np
@@ -34,4 +35,4 @@ ax.legend((r"$y = \phi(x) = x^{2} - \sqrt{x^{4} + 1}$",
 plt.show()
 
 # save plot
-fig.savefig("ch01_ex20.png")
+fig.savefig("ch01_ex20.pdf")
