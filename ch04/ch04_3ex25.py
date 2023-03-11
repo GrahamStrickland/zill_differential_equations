@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems - 10e
 # Section 4.3 - Question 25
-
-
 from sympy import Symbol, div
 
 

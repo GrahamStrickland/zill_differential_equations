@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # Zill - Differential Equations with Boundary-Value Problems - 10e
 # Section 7.4 - Question 15
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
